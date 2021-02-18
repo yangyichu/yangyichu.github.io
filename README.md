@@ -1,20 +1,52 @@
-# Hydejack Starter Kit
+<a href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/free-bootstrap-theme-for-web-developers/" target="_blank"><img src="https://themes.3rdwavemedia.com/wp-content/uploads/2018/07/free-bootstrap-portfolio-theme-for-web-developers.jpg" alt="Developer Theme" width="750" /></a>
 
-A quicker, cleaner way to get started blogging with [Hydejack](https://hydejack.com/).
+## Theme Details & Demo
 
-## Quick Start
-### Running locally
-1. Clone repository (git users), or [download] and unzip.
-2. Open terminal, `cd` into root directory (where `_config.yml` is located)
-3. Run `bundle install` [^1]
-4. Run `bundle exec jekyll serve`
-5. Open <http://localhost:4000/hydejack-starter-kit/>
+**Demo:** https://themes.3rdwavemedia.com/bootstrap-templates/resume/free-bootstrap-theme-for-web-developers/
 
-## What's next?
-* Open files and read the comments
-* Read the [docs](https://hydejack.com/docs/)
-* Buy the [PRO version](https://hydejack.com/download/) to get the project and resume layout, newsletter subscription box, custom forms, and more.
+Developer is a free Bootstrap 4 theme designed to **help developers promote their work**. 
+It can be used as a **professional portal** to your other online portfolios or websites (eg. Linkedin, CoderWall, Blog, GitHub etc) **in a modular fashion**. 
+The template comes with all of the **source SCSS files included** so the styling/colour can easily be customised to your taste.
 
-[^1]: Requires Bundler. Install with `gem install bundler`.
+## Author & License
 
-[download]: https://github.com/hydecorp/hydejack-starter-kit/archive/master.zip
+This Bootstrap template is made by UX/UI designer [Xiaoying Riley](https://twitter.com/3rdwave_themes) for developers and is 100% FREE as long as you **keep the footer attribution link**. You do not have the rights to resell, sublicense or redistribute (even for free) the template on its own or as a separate attachment from any of your work.
+
+If you'd like to **use the template without the footer attribution link**, you can [buy the **commercial license** via the theme website](https://themes.3rdwavemedia.com/bootstrap-templates/resume/free-bootstrap-theme-for-web-developers/)
+
+#### Follow Xiaoying
+
+[Twitter](https://twitter.com/3rdwave_themes)
+
+[Facebook](https://www.facebook.com/3rdwavethemes/)
+
+[Dribbble](https://dribbble.com/Xiaoying)
+
+[Medium](https://medium.com/@3rdwave_themes)
+
+[Linkedin](https://uk.linkedin.com/in/xiaoying)
+
+
+## Latest Version
+**v2.5** - 02 Nov 2020
+
+[Changelog](https://themes.3rdwavemedia.com/bootstrap-templates/resume/free-bootstrap-theme-for-web-developers/?target=changelog)
+
+
+## Features
+
+-  Fully Responsive
+-  HTML5 + CSS3
+-  Built on Bootstrap 4
+-  **SCSS** source files included
+-  1000+ FontAwesome 5 icons
+
+
+## Credits
+- [Bootstrap](http://getbootstrap.com/)
+- [FontAwesome](http://fortawesome.github.io/Font-Awesome/)
+- [jQuery](http://jquery.com/)
+- [GitHub Activity Stream](http://caseyscarborough.com/projects/github-activity/)
+- [GitHub Calendar Plugin](https://github.com/IonicaBizau/github-calendar)
+- [jQuery RSS](https://github.com/sdepold/jquery-rss)
+- Profile image: [Ben Smith](https://www.flickr.com/photos/dotbenjamin/2577394151)

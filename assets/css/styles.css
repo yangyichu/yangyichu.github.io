@@ -20,7 +20,7 @@ body {
 .anchor {
     display: block;
     position: relative;
-    top: -250px;
+    top: -60px;
     visibility: hidden;
 }
 

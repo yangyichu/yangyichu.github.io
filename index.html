@@ -20,6 +20,8 @@
 
     <!-- Global CSS -->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	
 
     <!-- github calendar css -->
     <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar.css">
@@ -27,14 +29,14 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
     <link rel="stylesheet" href="assets/plugins/github-activity/github-activity-0.1.5.min.css">
 
+
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-
 </head>
 
 <body>
     <!-- ******HEADER****** -->
-    <header class="header">
+    <header class="header" id="home">
         <div class="container clearfix">
             <img class="profile-image img-fluid float-left rounded-circle" src="assets/images/yichu_profile.jpg" width="180"
                 alt="profile image" />
@@ -56,7 +58,22 @@
         <!--//container-->
     </header>
     <!--//header-->
+	<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+	  <!-- Links -->
+	  <ul class="navbar-nav justify-content-center">
+		<li class="nav-item">
+		  <a class="nav-link" href="#">Link 1</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="#">Link 2</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="#">Link 3</a>
+		</li>
+	  </ul>
 
+	</nav>
+	
     <div class="container sections-wrapper">
         <div class="row">
             <div class="primary col-lg-8 col-12">
@@ -76,44 +93,49 @@
                     <!--//section-inner-->
                 </section>
                 <!--//section-->
+                <section class="experience section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Work Experience</h2>
+                        <div class="content">
+                            <div class="item">
+                                <h3 class="title">Co-Founder & Lead Developer - <span class="place"><a href="#">Startup
+                                            Hub</a></span> <span class="year">(2014 - Present)</span></h3>
+                                <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+                                    ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus
+                                    varius laoreet. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+                                    Etiam sit amet orci eget eros faucibus tincidunt.</p>
+                            </div>
+                            <!--//item-->
+                            <div class="item">
+                                <h3 class="title">Software Engineer - <span class="place"><a href="#">Google</a></span>
+                                    <span class="year">(2013 - 2014)</span></h3>
+                                <p>Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci
+                                    eu suscipit pellentesque, mauris dui tincidunt enim. Sed fringilla mauris sit amet
+                                    nibh. Donec sodales sagittis magna.</p>
+                            </div>
+                            <!--//item-->
 
+                            <div class="item">
+                                <h3 class="title">Software Engineer - <span class="place"><a href="#">eBay</a></span>
+                                    <span class="year">(2012 - 2013)</span></h3>
+                                <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
+                                    adipiscing sem neque sed ipsum.</p>
+                            </div>
+                            <!--//item-->
+
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//section-inner-->
+                </section>
+                <!--//section-->
                 <section class="latest section">
                     <div class="section-inner shadow-sm rounded">
                         <h2 class="heading">Latest Projects</h2>
                         <div class="content">
 
                             <div class="item featured text-center">
-
-                                <div class="featured-image has-ribbon">
-                                    <a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/launch-bootstrap-4-template-for-saas-businesses/"
-                                        target="_blank">
-                                        <img class="img-fluid project-image rounded shadow-sm"
-                                            src="assets/images/projects/project-featured.jpg" alt="project name" />
-                                    </a>
-                                    <div class="ribbon">
-                                        <div class="text">New</div>
-                                    </div>
-                                </div>
-
-                                <h3 class="title mb-3"><a
-                                        href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/launch-bootstrap-4-template-for-saas-businesses/"
-                                        target="_blank">Launch - The perfect Bootstrap template for SaaS products</a>
-                                </h3>
-
-                                <div class="desc text-left">
-                                    <p>You can promote your main project here. Suspendisse in tellus dolor. Vivamus a
-                                        tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu
-                                        suscipit pellentesque, mauris dui tincidunt enim, eget iaculis ante dolor non
-                                        turpis. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-                                        suscipit laboriosam.</p>
-                                </div>
-                                <!--//desc-->
-                                <a class="btn btn-cta-secondary"
-                                    href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/launch-bootstrap-4-template-for-saas-businesses/"
-                                    target="_blank"><i class="fas fa-thumbs-up"></i> Back my project</a>
-                            </div>
                             <!--//item-->
-                            <hr class="divider" />
                             <div class="item row">
                                 <a class="col-md-4 col-12"
                                     href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-4-startup-template-for-software-projects/"
@@ -295,88 +317,32 @@
                 </section>
                 <!--//section-->
 
-                <section class="experience section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Work Experience</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title">Co-Founder & Lead Developer - <span class="place"><a href="#">Startup
-                                            Hub</a></span> <span class="year">(2014 - Present)</span></h3>
-                                <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
-                                    ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus
-                                    varius laoreet. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
-                                    Etiam sit amet orci eget eros faucibus tincidunt.</p>
-                            </div>
-                            <!--//item-->
-                            <div class="item">
-                                <h3 class="title">Software Engineer - <span class="place"><a href="#">Google</a></span>
-                                    <span class="year">(2013 - 2014)</span></h3>
-                                <p>Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci
-                                    eu suscipit pellentesque, mauris dui tincidunt enim. Sed fringilla mauris sit amet
-                                    nibh. Donec sodales sagittis magna.</p>
-                            </div>
-                            <!--//item-->
 
-                            <div class="item">
-                                <h3 class="title">Software Engineer - <span class="place"><a href="#">eBay</a></span>
-                                    <span class="year">(2012 - 2013)</span></h3>
-                                <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
-                                    adipiscing sem neque sed ipsum.</p>
-                            </div>
-                            <!--//item-->
-
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </section>
-                <!--//section-->
-                <section class="github section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">My GitHub</h2>
-                        <p>You can embed your GitHub contribution graph calendar using IonicaBizau's <a
-                                href="https://github.com/IonicaBizau/github-calendar" target="_blank">GitHub
-                                Calendar</a> widget.
-
-                        <div id="github-graph" class="github-graph">
-
-                        </div>
-                        <!--//github-graph-->
-
-                        <p>You can also embed your GitHub activities using Casey Scarborough's <a
-                                href="https://github.com/caseyscarborough/github-activity" target="_blank">GitHub
-                                Activity Stream</a> widget.
-                            <!--//Usage: https://caseyscarborough.com/projects/github-activity/ -->
-                        <div id="ghfeed" class="ghfeed">
-                        </div>
-                        <!--//ghfeed-->
-
-                    </div>
-                    <!--//secton-inner-->
-                </section>
-                <!--//section-->
             </div>
             <!--//primary-->
             <div class="secondary col-lg-4 col-12">
-                <aside class="info aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading sr-only">Basic Information</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>San
-                                    Francisco, US</li>
-                                <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a
-                                        href="#">jameslee@website.com</a></li>
-                                <li><i class="fas fa-link"></i><span class="sr-only">Website:</span><a
-                                        href="#">https://www.website.com</a></li>
-                            </ul>
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//aside-->
-
+				 <aside class="education aside section">
+					 <div class="section-inner shadow-sm rounded">
+						 <h2 class="heading">Education</h2>
+						 <div class="content">
+							 <div class="item">
+								 <h3 class="title"><i class="fas fa-graduation-cap"></i> MS Robotics</h3>
+								 <h4 class="university">Northeastern Unitversity <span class="year">(2018-2021)</span>
+								 </h4>
+							 </div>
+							 <!--//item-->
+							 <div class="item">
+								 <h3 class="title"><i class="fas fa-graduation-cap"></i> BS Mechanical Engineering</h3>
+								 <h4 class="university">Shanghai Jiaotong University <span class="year">(2014-2018)</span></h4>
+							 </div>
+							 <!--//item-->
+						 </div>
+						 <!--//content-->
+					 </div>
+					 <!--//section-inner-->
+				 </aside>
+				 <!--//section-->
+				 
                 <aside class="skills aside section">
                     <div class="section-inner shadow-sm rounded">
                         <h2 class="heading">Coding Skills</h2>
@@ -513,28 +479,6 @@
                                 <p><a class="more-link" href="#"><i class="fas fa-external-link-alt"></i>More on
                                         GitHub</a></p>
                             </div>
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//section-->
-
-                <aside class="education aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Education</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i> MSc Computer Science</h3>
-                                <h4 class="university">University College London <span class="year">(2011-2012)</span>
-                                </h4>
-                            </div>
-                            <!--//item-->
-                            <div class="item">
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i> BSc Computer Science</h3>
-                                <h4 class="university">University of Bristol <span class="year">(2008-2011)</span></h4>
-                            </div>
-                            <!--//item-->
                         </div>
                         <!--//content-->
                     </div>
@@ -685,8 +629,7 @@
     <footer class="footer">
         <div class="container text-center">
             <!--/* This template is free as long as you keep the attribution link below. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
-            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a
-                    href="https://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+            <small class="copyright"> <i class="fas fa-heart"></i> Thank you for visiting</small>
         </div>
         <!--//container-->
     </footer>

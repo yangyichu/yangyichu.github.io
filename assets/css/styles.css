@@ -192,7 +192,7 @@ a.dotted-link:hover {
 
 /* ======= Sections======= */
 .sections-wrapper {
-  padding-top: 60px;
+  padding-top: 30px;
   padding-bottom: 60px;
 }
 
@@ -203,6 +203,12 @@ a.dotted-link:hover {
 .section .section-inner {
   background: #fff;
   padding: 30px;
+  margin-left: 10%;
+}
+.section .section-inner-right {
+  background: #fff;
+  padding: 30px;
+  margin-right: 10%;
 }
 
 .section .heading {
@@ -351,9 +357,14 @@ a.dotted-link:hover {
   color: #5f6b77;
 }
 
+.experience .content {
+	margin-top: -10px;
+	margin-bottom: -20px;
+}
+
 /* Work Section */
 .experience .item {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .experience .item .title {

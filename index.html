@@ -220,27 +220,27 @@
 											<button type="button" class="btn btn-tag">RL</button>
 											<button type="button" class="btn btn-tag">Lua</button>
 											<p class="mb-2"> The Binding of Isaac is a randomly generated action RPG shooter with heavy Rogue-like
-												elements. The first I did is to write a
+												elements. The first thing I did was to write a
 												gym-like environment for interaction. I used win32api and win32gui in python to get screen
 												shot and send control command to inactive
 												window directly(Otherwise I can do nothing on my PC at the same time). Also I used CheatEngine to speed up
 												the game about 20x. To make things easier I
-												modified a mod in LUA call easydebug so that I can quickly reset the game by sending only 1 key command
-												instead of typing in the console.Next part is the
+												modified a mod in LUA called easydebug so that I can quickly reset the game by sending only 1 key command
+												instead of typing a sentence in the console. Next part is the
 												reinforcement agent, two network structure was tested, DQN(deep Q-network) and DRQN (Deep Recurrent
 												Q-Network), they are basically the same except DQRN substitute the first fully-connected layer
 												with a LSTM layer. The frames are collected at 30fps, for DQN we need to wrap the env with a frame-skip and
 												stack class so that the agent can have some sense of
-												time, for DRQN we don't need that. So basically the frames are compressed to 82x82 then go through 3 layer
-												of Conv net and then a fully-connected layer(LSTM for DRQN) then to the output layer.
-												The action space I chose was too large(32, w a s d ↑ ↓ ← → and the combination) at first, the algorithm
-												fails to converge. Then I narrowed the action space to only 4 action (w↓,a→,s↑,d←) and the agent
-												successfully learned to beat the boss(Pin, a rather easier boss, initially it was Monstro) in 1.5M steps.
+												time lapse, for DRQN we don't need that. So the grabbed frames are compressed to 82x82 then go through 3 layer
+												of Conv nets and a fully-connected layer(LSTM for DRQN), then to the output layer.
+												
 											</p>
 											<p><button class="btn btn-tag2" data-toggle="collapse" data-target="#details_isaac" aria-expanded="true">See
 													Details</button></p>
 											<div id="details_isaac" class="collapse in" aria-expanded="true" style="">
-												<p> Results of 2M steps on DRQN with 4-actions.
+												<p>  Results of 2M steps on DRQN with 4-actions are shown below. The action space I chose was too large(32, w a s d ↑ ↓ ← → and the combination) at first, the algorithm
+												failed to converge. Then I reduced the action space to only 4 action (w↓,a→,s↑,d←) and the agent
+												successfully learned to beat the boss(Pin, a rather easier boss, initially it was Monstro which is too hard) in 1.5M steps.
 													<div class="container clearfix ">
 														<img class="img-fluid" src="assets/images/projects/rl1.png" alt="profile image" />
 														<img class="img-fluid" src="assets/images/projects/rl2.png" alt="profile image" />

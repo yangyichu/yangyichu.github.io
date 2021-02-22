@@ -728,6 +728,14 @@ a.dotted-link:hover {
   .project-image {
     margin-bottom: 15px;
   }
+  
+  .anchor {
+      display: block;
+      position: relative;
+      top: -80px;
+      visibility: hidden;
+  }
+  
 }
 
 @media (min-width: 992px){  

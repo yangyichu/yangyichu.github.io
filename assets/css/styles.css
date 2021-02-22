@@ -730,12 +730,24 @@ a.dotted-link:hover {
   }
 }
 
+@media (min-width: 992px){  
+	.navbar-nav {
+	  padding-left: 10%;
+	  justify-content: center;
+  }
+	.nav-item {
+		padding: 10px;
+	}
+
+}
+
 @media (min-width: 1400px) {
   .container {
     width: 1360px;
     max-width: inherit;
-  }
-}
+  }}
+  
+
 
 .navbar-nav {
     width: 100%;

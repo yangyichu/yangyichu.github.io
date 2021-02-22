@@ -31,11 +31,8 @@
 
 		<!-- Theme CSS -->
 		<link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-		
+
+
 	</head>
 
 	<body>
@@ -62,44 +59,53 @@
 			<!--//container-->
 		</header>
 		<!--//header-->
-		
 
-		<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="font-weight: 600; font-size: 18px;">
-			<!-- Links -->
-			<div class="navbar-header" >
-			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse" aria-expanded="false" >
-			    <span class="navbar-toggler-icon"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			  </button>
-			</div>
-			<div class="navbar-collapse dual-collapse collapse">
-			 <ul class="navbar-nav">
-				 <li class="nav-item active" style="padding-right: 10px;">
-				 	<a class="nav-link" href="https://yangyichu.github.io/#home">Home</a>
-				 </li>
-			 	<li class="nav-item" style="padding-right: 10px;">
-			 		<a class="nav-link" href="https://yangyichu.github.io/#workexperience">Work Experience</a>
-			 	</li>
-			 	<li class="nav-item" style="padding-right: 10px;">
-			 		<a class="nav-link" href="https://yangyichu.github.io/#latestprojects">Latest Projects</a>
-			 	</li>
-			 	<li class="nav-item" style="padding-right: 10px;">
-			 		<a class="nav-link" href="https://yangyichu.github.io/#otherprojects">Past Projects</a>
-			 	</li>
-				<li class="nav-item" style="padding-right: 10px;">
-					<a class="nav-link" href="https://yangyichu.github.io/#education">Education</a>
-				</li>
-				<li class="nav-item" style="padding-right: 10px;">
-					<a class="nav-link" href="https://yangyichu.github.io/#skills">Skills</a>
-				</li>
-				<li class="nav-item" style="padding-right: 10px;">
-					<a class="nav-link" href="https://yangyichu.github.io/#contactme">Contact Me</a>
-				</li>
-			 </ul>
+
+		<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" style="font-weight: 600; font-size: 18px;">
+			<a class="navbar-brand" href="#">Navbar</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="https://www.baidu.com" data-toggle="collapse" data-target=".navbar-collapse.show">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#top" data-toggle="collapse" data-target=".navbar-collapse.show">Link</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="https://yangyichu.github.io/#home" data-toggle="collapse" data-target=".navbar-collapse.show">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://yangyichu.github.io/#workexperience" data-toggle="collapse" data-target=".navbar-collapse.show">Work
+							Experience</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://yangyichu.github.io/#latestprojects" data-toggle="collapse" data-target=".navbar-collapse.show">Latest
+							Projects</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://yangyichu.github.io/#otherprojects" data-toggle="collapse" data-target=".navbar-collapse.show">Past
+							Projects</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://yangyichu.github.io/#education" data-toggle="collapse" data-target=".navbar-collapse.show">Education</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://yangyichu.github.io/#skills" data-toggle="collapse" data-target=".navbar-collapse.show">Skills</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://yangyichu.github.io/#contactme" data-toggle="collapse" data-target=".navbar-collapse.show">Contact
+							Me</a>
+					</li>
+				</ul>
 			</div>
 		</nav>
+
+
 
 		<div class="container-fluid sections-wrapper">
 			<div class="row">
@@ -257,16 +263,19 @@
 												Q-Network), they are basically the same except DQRN substitute the first fully-connected layer
 												with a LSTM layer. The frames are collected at 30fps, for DQN we need to wrap the env with a frame-skip and
 												stack class so that the agent can have some sense of
-												time lapse, for DRQN we don't need that. So the grabbed frames are compressed to 82x82 then go through 3 layer
+												time lapse, for DRQN we don't need that. So the grabbed frames are compressed to 82x82 then go through 3
+												layer
 												of Conv nets and a fully-connected layer(LSTM for DRQN), then to the output layer.
-												
+
 											</p>
 											<p><button class="btn btn-tag2" data-toggle="collapse" data-target="#details_isaac" aria-expanded="true">See
 													Details</button></p>
 											<div id="details_isaac" class="collapse in" aria-expanded="true" style="">
-												<p>  Results of 2M steps on DRQN with 4-actions are shown below. The action space I chose was too large(32, w a s d ↑ ↓ ← → and the combination) at first, the algorithm
-												failed to converge. Then I reduced the action space to only 4 action (w↓,a→,s↑,d←) and the agent
-												successfully learned to beat the boss(Pin, a rather easier boss, initially it was Monstro which is too hard) in 1.5M steps.
+												<p> Results of 2M steps on DRQN with 4-actions are shown below. The action space I chose was too large(32,
+													w a s d ↑ ↓ ← → and the combination) at first, the algorithm
+													failed to converge. Then I reduced the action space to only 4 action (w↓,a→,s↑,d←) and the agent
+													successfully learned to beat the boss(Pin, a rather easier boss, initially it was Monstro which is too
+													hard) in 1.5M steps.
 													<div class="container clearfix ">
 														<img class="img-fluid" src="assets/images/projects/rl1.png" alt="profile image" />
 														<img class="img-fluid" src="assets/images/projects/rl2.png" alt="profile image" />
@@ -447,35 +456,32 @@
 							<h2 class="heading">Past Projects</h2>
 							<div class="content">
 								<div class="item">
-										<h3 class="title">
-											<a>
-												Playing RainbowSix Siege with Semantic Segmentation
-											</a>
-										</h3>
-										<p class="summary">
-											<button type="button" class="btn btn-tag">Python</button>
-											<button type="button" class="btn btn-tag">Segmentation</button>
-											<button type="button" class="btn btn-tag">Firebase</button>
-											<button type="button" class="btn btn-tag">Google Authentication</button>
-											<button type="button" class="btn btn-tag">HTML</button>
-										</p>
-										<p>Implemented semantic segmentation to detect road in RainbowSix Siege, and then move player 
-										along the the path. Based on paper "ICNet for Real-Time Semantic Segmentation on High-Resolution 
+									<h3 class="title">
+										<a>
+											Playing RainbowSix Siege with Semantic Segmentation
+										</a>
+									</h3>
+									<p class="summary">
+										<button type="button" class="btn btn-tag">Python</button>
+										<button type="button" class="btn btn-tag">Segmentation</button>
+										<button type="button" class="btn btn-tag">Firebase</button>
+										<button type="button" class="btn btn-tag">Google Authentication</button>
+										<button type="button" class="btn btn-tag">HTML</button>
+									</p>
+									<p>Implemented semantic segmentation to detect road in RainbowSix Siege, and then move player
+										along the the path. Based on paper "ICNet for Real-Time Semantic Segmentation on High-Resolution
 										Images", the model weight is pre-trained with Cityscape dataset</p>
-										<p style="position: relative; top: -10px;"><button class="btn btn-tag2" data-toggle="collapse" 
-										data-target="#details_o3"
-											 aria-expanded="true">See
-												Details</button></p>
-										<ul>
-											<div id="details_o3" class="collapse in" aria-expanded="true" style="">
-												<img class="img-fluid project-image" width="150px"
-												style="border:4px solid gray;border-radius: 25px" 
-												src="assets/images/projects/r6.gif"
-												 alt="r6">
-												 </div>
-										</ul>
-							
-										
+									<p style="position: relative; top: -10px;"><button class="btn btn-tag2" data-toggle="collapse" data-target="#details_o3"
+										 aria-expanded="true">See
+											Details</button></p>
+									<ul>
+										<div id="details_o3" class="collapse in" aria-expanded="true" style="">
+											<img class="img-fluid project-image" width="150px" style="border:4px solid gray;border-radius: 25px" src="assets/images/projects/r6.gif"
+											 alt="r6">
+										</div>
+									</ul>
+
+
 								</div>
 
 								<div class="item">
@@ -529,7 +535,7 @@
 									</ul>
 								</div>
 
-								
+
 
 
 								<a class="btn btn-cta-secondary" href="https://github.com/yangyichu">More on GitHub <i class="fas fa-chevron-right pt-1"></i></a>
@@ -857,6 +863,9 @@
 		<script type="text/javascript" src="assets/plugins/github-activity/github-activity-0.1.5.min.js"></script>
 		<!-- custom js -->
 		<script type="text/javascript" src="assets/js/main.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</body>
 
 </html>

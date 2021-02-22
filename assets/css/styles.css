@@ -745,6 +745,12 @@ a.dotted-link:hover {
       display: inline-block;
     }
   }
+  
+ .navbar-header {
+     float: center;
+     text-align: center;
+ }
+ .navbar-brand {float:none;}
  
  .h_iframe iframe {
      width:100%;

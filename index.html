@@ -31,6 +31,11 @@
 
 		<!-- Theme CSS -->
 		<link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		
 	</head>
 
 	<body>
@@ -57,22 +62,43 @@
 			<!--//container-->
 		</header>
 		<!--//header-->
+		
+
 		<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="font-weight: 600; font-size: 18px;">
 			<!-- Links -->
-			<ul class="navbar-nav justify-content-center">
-				<li class="nav-item active" style="padding-right: 10px;">
-					<a class="nav-link" href="https://yangyichu.github.io/#home">Home</a>
+			<div class="navbar-header" >
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse" aria-expanded="false" >
+			    <span class="navbar-toggler-icon"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			</div>
+			<div class="navbar-collapse dual-collapse collapse">
+			 <ul class="navbar-nav">
+				 <li class="nav-item active" style="padding-right: 10px;">
+				 	<a class="nav-link" href="https://yangyichu.github.io/#home">Home</a>
+				 </li>
+			 	<li class="nav-item" style="padding-right: 10px;">
+			 		<a class="nav-link" href="https://yangyichu.github.io/#workexperience">Work Experience</a>
+			 	</li>
+			 	<li class="nav-item" style="padding-right: 10px;">
+			 		<a class="nav-link" href="https://yangyichu.github.io/#latestprojects">Latest Projects</a>
+			 	</li>
+			 	<li class="nav-item" style="padding-right: 10px;">
+			 		<a class="nav-link" href="https://yangyichu.github.io/#otherprojects">Past Projects</a>
+			 	</li>
+				<li class="nav-item" style="padding-right: 10px;">
+					<a class="nav-link" href="https://yangyichu.github.io/#education">Education</a>
 				</li>
 				<li class="nav-item" style="padding-right: 10px;">
-					<a class="nav-link" href="https://yangyichu.github.io/#workexperience">Work Experience</a>
+					<a class="nav-link" href="https://yangyichu.github.io/#skills">Skills</a>
 				</li>
 				<li class="nav-item" style="padding-right: 10px;">
-					<a class="nav-link" href="https://yangyichu.github.io/#latestprojects">Latest Projects</a>
+					<a class="nav-link" href="https://yangyichu.github.io/#contactme">Contact Me</a>
 				</li>
-				<li class="nav-item" style="padding-right: 10px;">
-					<a class="nav-link" href="https://yangyichu.github.io/#otherprojects">Other Projects</a>
-				</li>
-			</ul>
+			 </ul>
+			</div>
 		</nav>
 
 		<div class="container-fluid sections-wrapper">
@@ -418,7 +444,7 @@
 					<a class="anchor" id="otherprojects"></a>
 					<section class="projects section">
 						<div class="section-inner shadow-sm rounded">
-							<h2 class="heading">Other Projects</h2>
+							<h2 class="heading">Past Projects</h2>
 							<div class="content">
 								<div class="item">
 										<h3 class="title">
@@ -519,6 +545,7 @@
 				</div>
 				<!--//primary-->
 				<div class="secondary col-lg-3 col-12">
+					<a id="education" class="anchor"></a>
 					<aside class="education aside section">
 						<div class="section-inner-right shadow-sm rounded">
 							<h2 class="heading">Education</h2>
@@ -544,7 +571,7 @@
 						<!--//section-inner-->
 					</aside>
 					<!--//section-->
-
+					<a id="skills" class="anchor"></a>
 					<aside class="skills aside section">
 						<div class="section-inner-right shadow-sm rounded">
 							<h2 class="heading">Coding Skills</h2>

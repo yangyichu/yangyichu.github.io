@@ -7,6 +7,8 @@
  * Website: https://themes.3rdwavemedia.com/
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
 
 body {
   font-family: 'Lato', arial, sans-serif;
@@ -222,6 +224,61 @@ a.dotted-link:hover {
   font-size: 20px;
   margin-top: 8px;
 }
+/*==========Lan=========*/
+.en {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: top;
+	color: #333;
+}
+.zh {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: top;
+	color: #00a1ff;
+}
+.check {
+	position: relative;
+	width: 50px;
+}
+
+.check:before {
+	content: '';
+	position: absolute;
+	width: 50px;
+	height: 25px;
+	background: #333;
+	border-radius: 25px;
+}
+.check:checked:before {
+	background: #00a1ff;
+}
+
+.check:after {
+	content: '';
+	position: absolute;
+	left: 0px;
+	width: 25px;
+	height: 25px;
+	background: #fff;
+	border-radius: 25px;
+	transition: 0.25s;
+	border: 2px solid #333;
+	box-sizing: border-box;
+}
+.check:checked:after {
+	left:25px;
+	border: 2px solid #00a1ff;
+	box-sizing: border-box;
+}
+
+
+
+
 
 /* ======= Sections======= */
 .sections-wrapper {

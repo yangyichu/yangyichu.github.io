@@ -80,9 +80,7 @@
 						$(key).text(element);
 					});
 				}
-				// $(".lang").each(function(index, element) {
-				// 	$(this).text(arrLang[lang][$(this).attr("key")]);
-				// });
+
 				$('#langchecker').click(function() {
 					if ($("#langchecker").is(':checked')) {
 						lang = "zh";
@@ -93,7 +91,7 @@
 					} else {
 						lang = "en";
 						$.each(endata, function(key, element) {
-							console.log(element + key);
+							// console.log(element + key);
 							$(key).text(element);
 						})
 					}
@@ -101,13 +99,6 @@
 						localStorage.setItem('lang', lang);
 					}
 				});
-
-
-				// console.log($("#langchecker").is(':checked'));
-				// $('.lang').each(function(index, item) {
-				// 	$(this).text(arrLang[lang][$(this).attr('key')]);
-				// });
-				// });
 			});
 		
     </script>
@@ -509,7 +500,7 @@
                                         much faster way than widely used optimization-basedmethods.</p>
                                     <p>
                                         <button class="btn btn-tag2" data-toggle="collapse" data-target="#details_quad"
-                                                aria-expanded="true">&#9660
+                                                aria-expanded="true">
                                             &#9660 See
                                             Details
                                         </button>

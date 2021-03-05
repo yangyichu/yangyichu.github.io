@@ -27,6 +27,12 @@
 	"#ppj1_title":"在彩虹六号中实现基于ICnet的语义分割",
 	"#ppj2_title":"图书分类机器人设计与制造",
 	"#ppj3_title":"基于flask的文件管理系统",
-	"#ppj4_title":"基于Yolo5的实时猫咪识别"
+	"#ppj4_title":"基于Yolo5的实时猫咪识别",
+	
+	"#Education": "教育经历",
+	"#major1": " 机器人学 硕士",
+	"#major2": " 机械工程 学士",
+	"#Education1": "美国东北大学",
+	"#Education2": "上海交通大学"
 	
 }

@@ -8,6 +8,8 @@
 	"#nav_Education": "Education",
 	"#nav_Skills": "Skills",
 	"#nav_Contact": "Contact Me",
+	"#nav_blog": "Blog",
+	
 	
 	"#aboutme": "About Me",
 	"#aboutmecontent1": "I am about to graduate from Northeastern University with my MS degree in Robotics, concentrating in Mechanical Engineering. I got my BS degree in Mechanical Engineering at Shanghai Jiaotong University. I am interested in reinforcement learning and autonomous control in robotics. I have a strong background in control theory, mechanical design, and prototyping. I also have experience in deep learning, robotics, and optimization.",

@@ -41,7 +41,6 @@
 			if ('localStorage' in window) {
 				var lang = localStorage.getItem('lang') || navigator.language.slice(0, 2);
 			}
-
 			console.log("2" + '/language/' + lang + '.json');
 			var zhdata, endata;
 			$.ajax({

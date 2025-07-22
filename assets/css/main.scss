@@ -43,19 +43,20 @@
 /* 标题与 Badge 容器 */
 .title-container {
     display: flex;
-    align-items: center; /* 垂直居中，避免文字歪扭 */
-    gap: 8px; /* 徽章和标题之间的间距，可调整 */
-    margin-bottom: 20px; /* 标题与下方内容的间距（一行） */
+    align-items: flex-start; /* 上对齐 */
+    gap: 8px; /* 徽章和标题之间的间距 */
+    margin-bottom: 20px; /* 标题与下方内容的间距 */
 }
 
-/* 徽章样式：直角、蓝色 #00369f、高度紧凑 */
+/* 徽章样式：上对齐并微调位置更靠上 */
 .research-badge {
     background-color: #00369f;
     color: #fff;
     font-size: 14px;
-    padding: 4px 8px; /* 上下4px，左右8px，控制高度和宽度 */
+    padding: 4px 8px;
     border-radius: 0; /* 直角效果 */
-    line-height: 1; /* 消除文字垂直间距 */
+    line-height: 1;
+    margin-top: -2px; /* 向上微调2px，更靠上 */
 }
 
 /* 标题样式：继承父容器行高，避免重叠 */
@@ -64,7 +65,7 @@
     font-weight: bold;
     margin: 0; /* 清除默认边距 */
     line-height: 1.2; /* 让文字垂直居中更自然 */
-    color: #333; /* 标题文字颜色，可调整 */
+    color: #00369f; /* 标题文字颜色，可调整 */
 }
 
 .paper-box {

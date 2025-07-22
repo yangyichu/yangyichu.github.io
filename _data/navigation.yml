@@ -1,0 +1,20 @@
+# main links links
+main:
+  - title: "About Me"
+    url: "/#about-me"
+
+  - title: "News"
+    url: "/#-news"
+
+  - title: "Publications"
+    url: "/#-publications"
+
+  - title: "Research and Projects"
+    url: "/#-research-and-projects"
+
+  - title: "Work Experience"
+    url: "/#-work-experience"
+
+  - title: "Educations"
+    url: "/#-educations"
+

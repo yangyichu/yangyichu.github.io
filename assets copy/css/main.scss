@@ -1,0 +1,137 @@
+---
+---
+
+/*
+ *    Minimal Mistakes Jekyll Theme
+ *
+ *  - Michael Rose
+ *  - mademistakes.com
+ *  - https://twitter.com/mmistakes
+ *
+*/
+
+@import "vendor/breakpoint/breakpoint"; // media query mixins
+@import "variables";
+@import "mixins";
+@import "vendor/susy/susy";
+
+@import "reset";
+@import "base";
+
+@import "utilities";
+@import "animations";
+@import "tables";
+@import "buttons";
+@import "notices";
+@import "masthead";
+@import "navigation";
+@import "footer";
+@import "syntax";
+
+@import "forms";
+
+@import "page";
+@import "archive";
+@import "sidebar";
+
+@import "vendor/font-awesome/fontawesome";
+@import "vendor/font-awesome/solid";
+@import "vendor/font-awesome/brands";
+@import "vendor/magnific-popup/magnific-popup";
+@import "print";
+
+/* 标题与 Badge 容器 */
+.title-container {
+    display: flex;
+    align-items: center; /* 垂直居中，避免文字歪扭 */
+    gap: 8px; /* 徽章和标题之间的间距，可调整 */
+    margin-bottom: 20px; /* 标题与下方内容的间距（一行） */
+}
+
+/* 徽章样式：直角、蓝色 #00369f、高度紧凑 */
+.research-badge {
+    background-color: #00369f;
+    color: #fff;
+    font-size: 14px;
+    padding: 4px 8px; /* 上下4px，左右8px，控制高度和宽度 */
+    border-radius: 0; /* 直角效果 */
+    line-height: 1; /* 消除文字垂直间距 */
+}
+
+/* 标题样式：继承父容器行高，避免重叠 */
+.main-title {
+    font-size: 16px; /* 可根据需求调整 */
+    font-weight: bold;
+    margin: 0; /* 清除默认边距 */
+    line-height: 1.2; /* 让文字垂直居中更自然 */
+    color: #333; /* 标题文字颜色，可调整 */
+}
+
+.paper-box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px #efefef solid;
+    padding: 1em 0 2em 0;
+    
+
+    .paper-box-image{
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        order: 2;
+        img {
+            max-width: 350px;
+            box-shadow: 3px 3px 6px #888;
+            border-radius: 8px; /* 添加 8px 圆角 */
+            object-fit: cover;
+        }
+    }
+    
+    .paper-box-text{
+        max-width: 100%;
+        order: 1;
+    }
+    
+    @include breakpoint($medium) {
+        .paper-box-image{
+            justify-content: left;
+            min-width: 200px;
+            max-width: 40%;
+            order: 1;
+        }
+        
+        .paper-box-text{
+            justify-content: left;
+            padding-left: 2em;
+            max-width: 60%;
+            order: 2;
+        }
+
+    }
+
+
+}
+
+$scroll_offset : 2em;
+h1:before, .anchor:before { 
+    content: ''; 
+    display: block; 
+    position: relative; 
+    width: 0; 
+    height: $scroll_offset; 
+    margin-top: -$scroll_offset;
+}
+
+.badge {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: absolute;
+    margin-top: .5em;
+    margin-left: -.5em;
+    color: white;
+    background-color: #00369f;
+    font-size: .8em;
+}

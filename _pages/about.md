@@ -96,12 +96,12 @@ Chen Yu, <span style="font-weight: bold; color: #00369f;">Yichu Yang</span>, Tia
 <div class="image-row" style="display: flex; gap: 15px; margin-bottom: 15px; width: 100%;">
   <img src="images/dog1.gif" alt="dog1"
        style="height: 150px; width: auto; object-fit: contain; border-radius: 8px; min-width: 0;">
-  <img src="images/dog2.gif" alt="dog2"
+  <img src="images/dog2-s.gif" alt="dog2"
        style="height: 150px; width: auto; object-fit: contain; border-radius: 8px; min-width: 0;">
-  <img src="images/dog-reset.gif" alt="image"
+  <img src="images/dog-reset-s.gif" alt="image"
        style="height: 150px; width: auto; object-fit: cover; border-radius: 8px; min-width: 0;">
   
-  <img src="images/dog-reset2.gif" alt="image"
+  <img src="images/dog-reset2-s.gif" alt="image"
       style="height: 150px; width: auto; object-fit: cover; border-radius: 8px; min-width: 0;">
 </div>
 </div>
@@ -122,9 +122,9 @@ Chen Yu, <span style="font-weight: bold; color: #00369f;">Yichu Yang</span>, Tia
     </div>
     <!-- 图片行（保持相同大小） -->
     <div class="image-row" style="display: flex; gap: 15px; margin-bottom: 15px; width: 100%;">
-      <img src="images/dog_flip.gif" alt="dog1"
+      <img src="images/dog_flip-s.gif" alt="dog1"
           style="height: 150px; width: auto; object-fit: contain; border-radius: 8px; min-width: 0;">
-      <img src="images/dog_flip2.gif" alt="dog2"
+      <img src="images/dog_flip2-s.gif" alt="dog2"
           style="height: 150px; width: auto; object-fit: contain; border-radius: 8px; min-width: 0;">
     </div>
   </div>
@@ -141,7 +141,7 @@ Chen Yu, <span style="font-weight: bold; color: #00369f;">Yichu Yang</span>, Tia
     </div>
     <!-- 图片行（保持相同大小） -->
     <div class='image-row' style="display: flex; gap: 15px; margin-bottom: 15px; width: 100%;">
-      <img src="images/foot_sensor.gif" alt="dog2"
+      <img src="images/foot_sensor-s.gif" alt="dog2"
           style="height: 150px; width: auto; object-fit: contain; border-radius: 8px; min-width: 0;">
       <img src="images/patent.png" alt="patent"
           style="height: 150px; width: auto; object-fit: contain; border-radius: 8px; min-width: 0;">
@@ -149,6 +149,31 @@ Chen Yu, <span style="font-weight: bold; color: #00369f;">Yichu Yang</span>, Tia
   </div>
 </div>
 
+<div class="research-row" style="display: flex; gap: 20px; width: 100%;">
+
+<div class='paper-box'>
+  <!-- 标题区域（带徽章） -->
+  <div class="title-container">
+      <span class="research-badge">Thesis</span>
+      <h2 class="main-title">
+        <a href="assets/files/exoskt.pdf" target="_blank">
+          <img src="images/sjtu_logo.png" alt="SJTU logo" style="height: 1em; vertical-align: middle;">
+          Biomechanical simulation guided soft exoskeleton design
+        </a>
+      </h2>
+  </div>
+
+  <!-- 图片行（保持相同大小） -->
+<div class="image-row" style="display: flex; gap: 15px; margin-bottom: 15px; width: 100%;">
+  <img src="images/exoskt.png" alt="dog1"
+       style="height: 150px; width: auto; object-fit: contain; border-radius: 8px; min-width: 0;">
+  <img src="images/exoskt2.png" alt="dog1"
+       style="height: 150px; width: auto; object-fit: contain; border-radius: 8px; min-width: 0;">
+  <img src="images/exoskt3.png" alt="dog1"
+       style="height: 150px; width: auto; object-fit: contain; border-radius: 8px; min-width: 0;">
+</div>
+</div>
+</div>
 
 # 💼 Work Experience
 - *2024.01 - now*, Researcher, Seed Robotics, Bytedance. 

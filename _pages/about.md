@@ -75,7 +75,8 @@ Jiafeng Xu, <span style="font-weight: bold; color: #00369f;">Yichu Yang</span>, 
 
 Chen Yu, <span style="font-weight: bold; color: #00369f;">Yichu Yang</span>, Tianlin Liu, Yangwei You, Mingliang Zhou, Diyun Xiang
 
-[**Video**](https://www.youtube.com/watch?v=NAhYAmN2pYE) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+[**Video**](https://www.youtube.com/watch?v=NAhYAmN2pYE) [**Paper**](https://arxiv.org/abs/2410.13496)<strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+- Accepted by IROS 2024
 - Best Paper Runner-Up at [Deployable@CoRL2023](https://corl2023deployable.github.io/schedule/)
 - The policy was successfully deployed on Cyberdog2, enabling it to execute agile maneuvers such as running jumps, running backflips, and running sideflips
 </div>

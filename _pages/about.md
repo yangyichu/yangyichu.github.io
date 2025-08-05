@@ -26,7 +26,7 @@ My research interests primarily focus on robotics. I have experience in VLA, rei
 # 🔥 News
 - *2025.07*: &nbsp;🎉🎉 GR-3 released! A large scale VLA model that generalizes and can handle long-horizon and dexterous tasks. 
 - *2024.09*: &nbsp;🎉🎉 GR-2 released! A new state of the art generative VLA model that achieves average success rate of 97.7% across more than 100 tasks. 
-- *2024.06*: &nbsp;🎉🎉 Cyberdog2 released! The first commercial quadruped robot with ai-powered auto fall-recovery.
+- *2023.06*: &nbsp;🎉🎉 Cyberdog2 released! The first commercial quadruped robot with ai-powered auto fall-recovery.
 
 # 📝 Publications 
 <!-- 1 -->

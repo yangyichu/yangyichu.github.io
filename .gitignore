@@ -1,3 +1,17 @@
 _site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/cache/
 push.sh
 .DS_Store
+*.crdownload
+
+# Local-only, unreferenced media/documents
+/53c2fdbeb10ccb1d288ff719df7d7208.mp4
+/微信视频2025-09-03_233825_327.mp4
+/微信视频2025-09-03_234009_688.mp4
+/assets/files/CS5180_Final_Project.pdf
+/assets/files/Yichu_s_Resume.pdf
+/.github/FUNDING.yml

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" role="img" aria-labelledby="title desc">
+  <title id="title">Cosmos 3</title>
+  <desc id="desc">Omnimodal world models connecting language, image, video, audio, and action for physical AI.</desc>
+  <defs>
+    <radialGradient id="bg" cx="72%" cy="36%" r="86%">
+      <stop offset="0" stop-color="#263d35"/>
+      <stop offset="0.46" stop-color="#111a18"/>
+      <stop offset="1" stop-color="#050706"/>
+    </radialGradient>
+    <linearGradient id="green" x1="0" x2="1">
+      <stop stop-color="#76b900"/>
+      <stop offset="1" stop-color="#b8f34a"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="500" height="300" rx="12" fill="url(#bg)"/>
+  <g opacity=".24" stroke="#76b900" fill="none">
+    <circle cx="374" cy="99" r="69"/><circle cx="374" cy="99" r="48"/><circle cx="374" cy="99" r="27"/>
+    <path d="M305 99H443M374 30V168M325 50l98 98M423 50l-98 98"/>
+  </g>
+  <circle cx="374" cy="99" r="7" fill="#b8f34a" filter="url(#glow)"/>
+  <text x="34" y="76" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="2">NVIDIA</text>
+  <text x="31" y="160" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="55" font-weight="700">Cosmos</text>
+  <text x="223" y="160" fill="url(#green)" font-family="Arial, Helvetica, sans-serif" font-size="66" font-weight="700">3</text>
+  <text x="35" y="197" fill="#cbd5d1" font-family="Arial, Helvetica, sans-serif" font-size="18">Omnimodal World Models for Physical AI</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#d9e3df">
+    <rect x="35" y="226" width="76" height="27" rx="13.5" fill="#1e2c28" stroke="#426157"/><text x="54" y="244">Language</text>
+    <rect x="119" y="226" width="62" height="27" rx="13.5" fill="#1e2c28" stroke="#426157"/><text x="137" y="244">Image</text>
+    <rect x="189" y="226" width="61" height="27" rx="13.5" fill="#1e2c28" stroke="#426157"/><text x="207" y="244">Video</text>
+    <rect x="258" y="226" width="61" height="27" rx="13.5" fill="#1e2c28" stroke="#426157"/><text x="275" y="244">Audio</text>
+    <rect x="327" y="226" width="64" height="27" rx="13.5" fill="#76b900"/><text x="344" y="244" fill="#071006" font-weight="700">Action</text>
+  </g>
+</svg>

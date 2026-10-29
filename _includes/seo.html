@@ -8,7 +8,7 @@
   {% assign canonical_url = page.url | replace: "index.html", "" | prepend: site.url %}
 {% endif %}
 
-<title>{{ site.title }} - Homepage</title>
+<title>{{ page.title | default: site.title }}{% unless page.title == site.title %} - {{ site.title }}{% endunless %}</title>
 
 {% assign seo_description = page.description | default: page.excerpt | default: site.description %}
 {% if seo_description %}
@@ -38,9 +38,14 @@
   <meta property="og:url" content="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
 {% endif %}
 
-{% if page.excerpt %}
+{% if seo_description %}
+  <meta name="description" content="{{ seo_description }}">
   <meta property="og:description" content="{{ seo_description }}">
 {% endif %}
+
+<meta property="og:type" content="profile">
+<meta property="og:image" content="{{ site.author.avatar | prepend: '/' | prepend: seo_url }}">
+<meta name="robots" content="index, follow, max-image-preview:large">
 
 {% if site.twitter.username %}
   <meta name="twitter:site" content="@{{ site.twitter.username | replace: "@", "" }}">
@@ -72,4 +77,30 @@
 {% if site.baidu_site_verification %}
   <meta name="baidu-site-verification" content="{{ site.baidu_site_verification }}" />
 {% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ site.author.name | jsonify }},
+  "alternateName": {{ site.author.alternate_name | jsonify }},
+  "url": {{ seo_url | jsonify }},
+  "image": {{ site.author.avatar | prepend: '/' | prepend: seo_url | jsonify }},
+  "jobTitle": "Robotics Researcher at NVIDIA",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "NVIDIA"
+  },
+  "alumniOf": [
+    {"@type": "CollegeOrUniversity", "name": "Northeastern University"},
+    {"@type": "CollegeOrUniversity", "name": "Shanghai Jiao Tong University"}
+  ],
+  "knowsAbout": ["Robotics", "Vision-Language-Action Models", "Reinforcement Learning", "Robot Control"],
+  "sameAs": [
+    "https://www.linkedin.com/in/yichu-yang",
+    "https://github.com/yangyichu",
+    "https://dblp.org/pid/390/0901.html"
+  ]
+}
+</script>
 <!-- end SEO -->

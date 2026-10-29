@@ -6,8 +6,9 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Yichu Yang"
-description              : "I'm currently a researcher at Seed Robotics, Bytedance."
+title                    : "Yichu (Bill) Yang"
+description              : "Yichu (Bill) Yang is a robotics researcher at NVIDIA working on physical AI, world models, and robot learning. He previously worked at Seed Robotics, ByteDance, and Xiaomi Robotics Lab."
+url                      : "https://yangyichu.github.io"
 repository               : "yangyichu/yangyichu.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -21,14 +22,15 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Yichu Yang"
+  name             : "Yichu (Bill) Yang"
+  alternate_name   : "Bill Yang"
   avatar           : "images/yichu_profile2.png"
   # avatar           : "images/android-chrome-192x192.png"
-  bio              : "Researcher"
+  bio              : "Robotics Researcher at NVIDIA"
   location         : 
-  employer         : "Seed Robotics, Bytedance"
+  employer         : "NVIDIA"
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
+  googlescholar    : "https://scholar.google.com/citations?view_op=search_authors&mauthors=Yichu+Yang+robotics"
   email            : "yichu.yang@gmail.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -38,15 +40,15 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : # e.g., "github username"
+  github           : "yangyichu"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : # e.g., "https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : # e.g., "linkedin username"
-  dblp             : # e.g., "https://dblp.org/pid/xx/xxxx.html"
-  orcid            : # e.g., "https://orcid.org/xxxx"
+  linkedin         : "yichu-yang"
+  dblp             : "https://dblp.org/pid/390/0901.html"
+  orcid            :
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username

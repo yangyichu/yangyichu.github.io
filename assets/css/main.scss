@@ -57,6 +57,10 @@
     border-radius: 0; /* 直角效果 */
     line-height: 1;
     margin-top: -2px; /* 向上微调2px，更靠上 */
+    width: 64px;
+    box-sizing: border-box;
+    flex: 0 0 64px;
+    text-align: center;
 }
 
 /* 标题样式：继承父容器行高，避免重叠 */
@@ -66,11 +70,13 @@
     margin: 0; /* 清除默认边距 */
     line-height: 1.2; /* 让文字垂直居中更自然 */
     color: #00369f; /* 标题文字颜色，可调整 */
+    flex: 1;
+    min-width: 0;
 }
 
 .paper-box {
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
@@ -87,6 +93,16 @@
             max-width: 350px;
             box-shadow: 3px 3px 6px #888;
             border-radius: 8px; /* 添加 8px 圆角 */
+            object-fit: cover;
+        }
+
+        video {
+            width: 100%;
+            max-width: 350px;
+            aspect-ratio: 16 / 9;
+            display: block;
+            box-shadow: 3px 3px 6px #888;
+            border-radius: 8px;
             object-fit: cover;
         }
     }
@@ -114,6 +130,149 @@
     }
 
 
+}
+
+.research-row,
+.image-row {
+    min-width: 0;
+}
+
+.image-row {
+    flex-wrap: wrap;
+}
+
+.image-row img {
+    max-width: 100%;
+}
+
+.paper-title-with-logo {
+    display: block;
+}
+
+.paper-title-with-logo .paper-title-logo {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    vertical-align: -4px;
+    margin-right: 2px;
+}
+
+.nvidia-eye-mark {
+    width: 16px !important;
+    height: 16px !important;
+    background-image: url("../../images/nvidia-logo-horizontal.svg");
+    background-repeat: no-repeat;
+    background-size: 105px 59px;
+    background-position: -9px -22px;
+    vertical-align: -3px !important;
+}
+
+.bytedance-mark {
+    background-image: url("../../images/bytedance.png");
+    background-repeat: no-repeat;
+    background-size: 33px 33px;
+    background-position: -6px -6px;
+}
+
+.news-logo {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    vertical-align: -5px;
+    margin-right: 3px;
+}
+
+.author__employer {
+    display: block !important;
+    margin-bottom: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.author__employer-logo {
+    display: block;
+    width: 78px;
+    height: 18px;
+    object-fit: contain;
+    object-position: left center;
+    filter: brightness(0) saturate(100%) invert(67%) sepia(72%) saturate(3555%) hue-rotate(42deg) brightness(91%) contrast(103%);
+}
+
+/* Keep the two Xiaomi project cards on one shared grid. */
+.project-pair {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    align-items: stretch;
+}
+
+.project-card {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    border: 0;
+    border-radius: 8px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.project-card .title-container {
+    width: 100%;
+    min-height: 58px;
+}
+
+.project-card .image-row {
+    margin-top: auto;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.project-card .image-row img {
+    flex: 1 1 0;
+    width: calc(50% - 8px) !important;
+    height: 150px !important;
+}
+
+@media (max-width: 600px) {
+    .research-row {
+        flex-direction: column;
+        gap: 0 !important;
+    }
+
+    .research-row.project-pair {
+        flex-direction: row;
+        gap: 12px !important;
+    }
+
+    .image-row img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 220px;
+    }
+
+    .title-container {
+        margin-bottom: 12px;
+    }
+
+    .project-card {
+        padding: 12px 4px;
+    }
+
+    .project-card .title-container {
+        min-height: 0;
+    }
+
+    .project-card .image-row {
+        flex-wrap: wrap;
+    }
+
+    .project-card .image-row img {
+        width: 100% !important;
+        height: auto !important;
+    }
 }
 
 $scroll_offset : 2em;

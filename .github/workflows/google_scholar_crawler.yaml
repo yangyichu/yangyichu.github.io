@@ -36,11 +36,27 @@ jobs:
           cache: pip
           cache-dependency-path: google_scholar_crawler/requirements.txt
 
+      - name: Restore last successful citation data
+        run: |
+          mkdir -p google_scholar_crawler/results
+          curl --fail --silent --show-error --location \
+            "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/google-scholar-stats/gs_data.json" \
+            --output google_scholar_crawler/results/gs_data.json || true
+          curl --fail --silent --show-error --location \
+            "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/google-scholar-stats/gs_data_shieldsio.json" \
+            --output google_scholar_crawler/results/gs_data_shieldsio.json || true
+
       - name: Fetch citation data
+        continue-on-error: true
         working-directory: google_scholar_crawler
         run: |
           python -m pip install --disable-pip-version-check -r requirements.txt
           python main.py
+
+      - name: Verify citation data is available
+        run: |
+          test -s google_scholar_crawler/results/gs_data.json
+          test -s google_scholar_crawler/results/gs_data_shieldsio.json
 
       - name: Publish citation data branch
         uses: peaceiris/actions-gh-pages@v4

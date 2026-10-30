@@ -8,13 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-{% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
-{% else %}
-{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
-{% endif %}
-{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
-
 <span class='anchor' id='about-me'></span>
 <h1 class="sr-only">Yichu (Bill) Yang — Robotics Researcher at NVIDIA</h1>
 
@@ -23,18 +16,6 @@ I am a robotics researcher at **NVIDIA**, working on physical AI, world models, 
 I received my MS in Robotics from Northeastern University, with a concentration in Mechanical Engineering, and my BS in Mechanical Engineering from Shanghai Jiao Tong University.
 
 My research spans robot learning, control, mechanical design, and rapid prototyping, with an emphasis on building robust systems that transfer from research to real-world deployment.
-
-<section class="scholar-metrics" aria-labelledby="scholar-metrics-title">
-  <div class="scholar-metrics__header">
-    <div>
-      <a id="scholar-metrics-title" href="https://scholar.google.com/citations?user=A_oWM24AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-      <span class="scholar-metrics__total"><strong id="total_cit">—</strong> citations</span>
-    </div>
-    <span id="scholar_metrics_status" class="scholar-metrics__status">Updated daily</span>
-  </div>
-  <div id="scholar_citation_chart" class="scholar-metrics__chart" role="img" aria-label="Google Scholar citations by year"></div>
-</section>
-
 
 # 🔥 News
 - *2026.05*: &nbsp;🎉 [Cosmos 3](https://research.nvidia.com/labs/cosmos-lab/cosmos3/) released—an open omnimodal world foundation model for physical AI reasoning, generation, and action.
@@ -92,7 +73,7 @@ Chi-Lam Cheang, Guangzeng Chen, Ya Jing, Tao Kong,
 Hang Li, Yifeng Li, Yuxiao Liu, Hongtao Wu,
 Jiafeng Xu, <span style="font-weight: bold; color: #00369f;">Yichu Yang</span>, Hanbo Zhang, Minzhao Zhu
 
-[**Project**](https://gr2-manipulation.github.io/)  [**Paper**](https://arxiv.org/pdf/2410.06158) <strong><span class='show_paper_citations' data='A_oWM24AAAAJ:u5HHmVD_uO8C' data-title='GR-2: A Generative Video-Language-Action Model with Web-Scale Knowledge for Robot Manipulation'></span></strong>
+[**Project**](https://gr2-manipulation.github.io/)  [**Paper**](https://arxiv.org/pdf/2410.06158)
 - GR-2 achieves a 97.7% success rate across 100+ tasks
 - GR-2 excels in industrial scenarios like end-to-end picking and adapts well to unseen environments. 
 </div>
@@ -110,7 +91,7 @@ Jiafeng Xu, <span style="font-weight: bold; color: #00369f;">Yichu Yang</span>, 
 
 Chen Yu, <span style="font-weight: bold; color: #00369f;">Yichu Yang</span>, Tianlin Liu, Yangwei You, Mingliang Zhou, Diyun Xiang
 
-[**Video**](https://www.youtube.com/watch?v=NAhYAmN2pYE) [**Paper**](https://arxiv.org/abs/2410.13496)<strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC' data-title='State Estimation Transformers for Agile Legged Locomotion'></span></strong>
+[**Video**](https://www.youtube.com/watch?v=NAhYAmN2pYE) [**Paper**](https://arxiv.org/abs/2410.13496)
 - Accepted by IROS 2024
 - Best Paper Runner-Up at [Deployable@CoRL2023](https://corl2023deployable.github.io/schedule/)
 - The policy was successfully deployed on Cyberdog2, enabling it to execute agile maneuvers such as running jumps, running backflips, and running sideflips

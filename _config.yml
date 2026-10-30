@@ -10,7 +10,8 @@ title                    : "Yichu (Bill) Yang"
 description              : "Yichu (Bill) Yang is a robotics researcher at NVIDIA working on physical AI, world models, and robot learning. He previously worked at Seed Robotics, ByteDance, and Xiaomi Robotics Lab."
 url                      : "https://yangyichu.github.io"
 repository               : "yangyichu/yangyichu.github.io"
-google_scholar_stats_use_cdn : true
+google_scholar_stats_use_cdn : false
+google_scholar_id            : "A_oWM24AAAAJ"
 
 # google analytics
 google_analytics_id      :  G-4NSRGGDFGG # get google_analytics_id from https://analytics.google.com/analytics/
@@ -30,7 +31,7 @@ author:
   location         : 
   employer         : "NVIDIA"
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?view_op=search_authors&mauthors=Yichu+Yang+robotics"
+  googlescholar    : "https://scholar.google.com/citations?user=A_oWM24AAAAJ&hl=en"
   email            : "yichu.yang@gmail.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :

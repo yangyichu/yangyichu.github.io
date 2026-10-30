@@ -79,8 +79,8 @@ def main() -> int:
     scholar_id = os.environ.get("GOOGLE_SCHOLAR_ID", "").strip()
     if not scholar_id:
         print(
-            "GOOGLE_SCHOLAR_ID is required. Add the profile ID from the user= part "
-            "of your Google Scholar profile URL as a GitHub Actions secret.",
+            "GOOGLE_SCHOLAR_ID is required. Use the profile ID from the user= part "
+            "of the public Google Scholar profile URL.",
             file=sys.stderr,
         )
         return 2

@@ -24,6 +24,17 @@ I received my MS in Robotics from Northeastern University, with a concentration 
 
 My research spans robot learning, control, mechanical design, and rapid prototyping, with an emphasis on building robust systems that transfer from research to real-world deployment.
 
+<section class="scholar-metrics" aria-labelledby="scholar-metrics-title">
+  <div class="scholar-metrics__header">
+    <div>
+      <a id="scholar-metrics-title" href="https://scholar.google.com/citations?user=A_oWM24AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <span class="scholar-metrics__total"><strong id="total_cit">—</strong> citations</span>
+    </div>
+    <span id="scholar_metrics_status" class="scholar-metrics__status">Updated daily</span>
+  </div>
+  <div id="scholar_citation_chart" class="scholar-metrics__chart" role="img" aria-label="Google Scholar citations by year"></div>
+</section>
+
 
 # 🔥 News
 - *2026.05*: &nbsp;🎉 [Cosmos 3](https://research.nvidia.com/labs/cosmos-lab/cosmos3/) released—an open omnimodal world foundation model for physical AI reasoning, generation, and action.

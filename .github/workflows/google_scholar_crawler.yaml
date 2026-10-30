@@ -19,7 +19,7 @@ permissions:
 
 concurrency:
   group: google-scholar-crawler
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   update:

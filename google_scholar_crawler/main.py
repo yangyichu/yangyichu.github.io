@@ -10,22 +10,85 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import parse_qs, urlparse
+
+
+def parse_profile_html(html: str) -> dict[str, Any]:
+    """Parse the public fields used by the site from a Scholar profile page."""
+    from bs4 import BeautifulSoup
+
+    soup = BeautifulSoup(html, "html.parser")
+    name_element = soup.select_one("#gsc_prf_in")
+    if not name_element:
+        raise RuntimeError("Scholar returned no public profile; it may be rate-limiting the runner")
+
+    stat_values = [
+        int(element.get_text(strip=True).replace(",", "") or 0)
+        for element in soup.select(".gsc_rsb_std")
+    ]
+    years = [element.get_text(strip=True) for element in soup.select(".gsc_g_t")]
+    yearly_counts = [
+        int(element.get_text(strip=True).replace(",", "") or 0)
+        for element in soup.select(".gsc_g_al")
+    ]
+
+    publications = []
+    for row in soup.select(".gsc_a_tr"):
+        title_link = row.select_one(".gsc_a_at")
+        if not title_link:
+            continue
+        citation_for_view = parse_qs(
+            urlparse(title_link.get("href", "")).query
+        ).get("citation_for_view", [""])[0]
+        citation_text = row.select_one(".gsc_a_c")
+        citation_digits = "".join(
+            character
+            for character in (citation_text.get_text(" ", strip=True) if citation_text else "")
+            if character.isdigit()
+        )
+        publications.append(
+            {
+                "author_pub_id": citation_for_view,
+                "num_citations": int(citation_digits or 0),
+                "bib": {"title": title_link.get_text(" ", strip=True)},
+            }
+        )
+
+    return {
+        "name": name_element.get_text(" ", strip=True),
+        "citedby": stat_values[0] if stat_values else 0,
+        "cites_per_year": dict(zip(years, yearly_counts)),
+        "publications": publications,
+    }
 
 
 def fetch_author(scholar_id: str, attempts: int = 3) -> dict[str, Any]:
-    """Fetch an author profile, retrying transient Scholar/network failures."""
-    from scholarly import scholarly
+    """Fetch and parse a public author profile with bounded retries."""
+    import requests
 
     last_error: Exception | None = None
+    scholar_hosts = (
+        "scholar.google.com",
+        "scholar.google.co.uk",
+        "scholar.google.com.au",
+    )
     for attempt in range(1, attempts + 1):
         try:
-            author = scholarly.search_author_id(scholar_id)
-            if not author:
-                raise RuntimeError(f"No Google Scholar profile found for ID {scholar_id!r}")
-            return scholarly.fill(
-                author, sections=["basics", "indices", "counts", "publications"]
+            response = requests.get(
+                f"https://{scholar_hosts[attempt - 1]}/citations",
+                params={"user": scholar_id, "hl": "en", "pagesize": 100},
+                headers={
+                    "User-Agent": (
+                        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+                        "Chrome/141.0 Safari/537.36"
+                    ),
+                    "Accept-Language": "en-US,en;q=0.9",
+                },
+                timeout=30,
             )
-        except Exception as exc:  # scholarly raises several transport/parser errors
+            response.raise_for_status()
+            return parse_profile_html(response.text)
+        except Exception as exc:
             last_error = exc
             if attempt < attempts:
                 time.sleep(2 ** (attempt - 1))
@@ -71,6 +134,11 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         help="Use a saved scholarly response instead of making a network request.",
     )
+    parser.add_argument(
+        "--source-html",
+        type=Path,
+        help="Parse a saved public Scholar profile page instead of downloading it.",
+    )
     return parser.parse_args()
 
 
@@ -87,6 +155,8 @@ def main() -> int:
 
     if args.source_json:
         author = json.loads(args.source_json.read_text(encoding="utf-8"))
+    elif args.source_html:
+        author = parse_profile_html(args.source_html.read_text(encoding="utf-8"))
     else:
         author = fetch_author(scholar_id)
 
